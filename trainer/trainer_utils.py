@@ -98,7 +98,7 @@ def setup_torch_training_env(
 
     if num_gpus > 1 and (not use_ddp and not args.use_accelerate):
         raise RuntimeError(
-            f" [!] {num_gpus} active GPUs. Define the target GPU by `CUDA_VISIBLE_DEVICES`. For multi-gpu training use `TTS/bin/distribute.py`."
+            f" [!] {num_gpus} active GPUs. Define the target GPU by `CUDA_VISIBLE_DEVICES`. For multi-gpu training use `TTS/utils/distribute.py`."
         )
 
     random.seed(training_seed)
